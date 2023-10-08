@@ -1,6 +1,7 @@
 import Tweet from '../models/tweet.js';
+import CrudRepository from './crud-repository.js';
 
-class TweetRepository{
+class TweetRepository extends CrudRepository{
 
     async create(data){
         try {
@@ -10,16 +11,6 @@ class TweetRepository{
             console.log("failed to create");
         }
         
-    }
-
-    async get(id){
-        try {
-            const tweet = await Tweet.findById(id);
-            return tweet;
-        } catch (error) {
-            console.log("failed to create");
-        }
-
     }
 
     // async update(tweetid,data){
@@ -56,15 +47,15 @@ class TweetRepository{
         
     }
 
-    async delete(id){
+    // async delete(id){
 
-        try {
-            const tweet = await Tweet.findByIdAndDelete(id);
-            return tweet;
-        } catch (error) {
-            console.log("failed to create");
-        }
+    //     try {
+    //         const tweet = await Tweet.findByIdAndDelete(id);
+    //         return tweet;
+    //     } catch (error) {
+    //         console.log("failed to create");
+    //     }
 
-    }
+    // }
 }
 export default TweetRepository;

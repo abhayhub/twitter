@@ -13,7 +13,7 @@ const likeSchema = new mongoose.Schema({
     },
     user : {
         type : mongoose.Schema.Types.ObjectId,
-        red : 'User',
+        ref : 'User',
         required : true
     }
 },{timestamps:true});
