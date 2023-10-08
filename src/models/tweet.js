@@ -9,12 +9,6 @@ const tweetScema = new mongoose.Schema({
         //max  : [chacracter limit, error message];
         max : [250, 'Tweet can not be more than 250 character']
     },
-    hashtags : [
-        {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : 'Hashtag'
-        }
-    ]
 },{timestamps : true});
 
 // tweetScema.virtual('contentWithEmail').get(function process(){
