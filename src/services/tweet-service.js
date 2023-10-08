@@ -12,7 +12,7 @@ class TweetService{
 
         //extracting tags from tweets using regex;
         //storing all tags after removing'#'
-        const tags = content.match(/#[a-zA-Z0-9]+/g).map((tag) => tag.substring(1)).map(tag => tag.toLowerCase());
+        const tags = content.match(/#[a-zA-Z0-9]+/g).map((tag) => tag.substring(1).toLowerCase());
         console.log(tags);
 
         const tweet = await this.tweetRepository.create(data);
