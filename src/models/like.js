@@ -1,7 +1,7 @@
 import mongoose  from "mongoose";
 
 const likeSchema = new mongoose.Schema({
-    onModal : {
+    onModel : {
         type: String,
         required : true,
         enum : ['Tweet','Comment']
@@ -9,7 +9,7 @@ const likeSchema = new mongoose.Schema({
     likeable : {
         type : mongoose.Schema.Types.ObjectId,
         required : true,
-        refPath : 'onModal' 
+        refPath: 'onModel' 
     },
     user : {
         type : mongoose.Schema.Types.ObjectId,
