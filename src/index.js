@@ -15,8 +15,8 @@ app.use(passport.initialize());
 passportAuth(passport);
 
 
-import {UserRepository , TweetRepository} from './repository/index.js';
-import LikeService  from './services/like-service.js';
+// import {UserRepository , TweetRepository} from './repository/index.js';
+// import LikeService  from './services/like-service.js';
 import { passportAuth } from './config/jwt-middleware.js';
 
 app.use('/api',apiRoutes);

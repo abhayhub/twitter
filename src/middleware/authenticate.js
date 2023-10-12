@@ -1,5 +1,6 @@
 import passport  from "passport";
 
+//middleware
 export const authenticate = (req, res, next) => {
     passport.authenticate('jwt',(err,user,data) => {
         if(err) next(err);
